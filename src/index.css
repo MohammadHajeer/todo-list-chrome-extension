@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-slide-out-up: slideOutUp 0.16s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  --animate-slide-in-up: slideInUp 0.22s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
